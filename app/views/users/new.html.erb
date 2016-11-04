@@ -1,0 +1,16 @@
+<% provide(:title, "FIGHTER!People you can take!") %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= yield(:title) %></title>
+    </head>
+    <body>
+        <%=simple_form_for @user do |f| %>
+            <%= f.input :name %>
+            <%= f.input :age %>
+            <%= f.input :description %>
+            <%= f.input :image %>
+            <%= f.button :submit %>
+        <%end%>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<% provide(:title, "FIGHTER!People you can take!") %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= yield(:title) %></title>
+    </head>
+    <body>
+        <h1>Current Fighters!</h1>
+        <%= @users.each do |user|%>
+            <%= user.name%>
+            <%= user.age%>
+            <%= image_tag user.image.url(:medium)%>
+            <%= user.description%>
+        <%end%>
+    </body>
+</html>
